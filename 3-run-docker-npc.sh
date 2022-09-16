@@ -1,0 +1,1 @@
+docker run -d --name npc --net=host --restart=always ffdfgdfg/npc -server=$SERVER:8024 -type=tcp -vkey=$VKEY
