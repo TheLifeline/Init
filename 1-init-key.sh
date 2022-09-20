@@ -1,8 +1,8 @@
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa -q
 cat ~/.ssh/id_rsa >> ~/key.pem
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-
-read -pr "Please enter your sudo Password. > " sudopw
+echo "Please enter your sudo Password. >"
+read -r sudopw
 echo "&sudop" | sudo -S sh -c "cp /etc/ssh/sshd_config /etc/ssh/sshd_config.ucf-old"
 echo "&sudop" | sudo -S sh -c 'sed -i "s/PasswordAuthentication yes/PasswordAuthentication no/g"  /etc/ssh/sshd_config'
 echo "&sudop" | sudo -S sh -c 'echo "
