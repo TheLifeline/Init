@@ -25,4 +25,10 @@ echo "&sudopw" | sudo -S sh -c 'rm -f docker-archive-keyring.gpg'
 echo "&sudopw" | sudo -S apt-get update 
 echo "&sudopw" | sudo -S apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
 
+echo "&sudopw" | sudo -S groupadd docker
+echo "&sudopw" | sudo -S usermod -aG docker $USER
+newgrp docker 
+echo "&sudopw" | sudo -S systemctl enable docker.service
+echo "&sudopw" | sudo -S systemctl enable containerd.service
+
 neofetch
