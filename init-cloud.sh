@@ -12,5 +12,5 @@ password
 password
 EOF
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-# echo "PermitRootLogin yes" > /etc/ssh/sshd_config.d/my.config
-# sed -i -e 's/.*sleep 10" \(.*$\)/\1/' /root/.ssh/authorized_keys
+# sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
+# sed -i -e 's/.*;exit 142" \(.*$\)/\1/' /root/.ssh/authorized_keys
