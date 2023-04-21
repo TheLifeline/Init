@@ -10,5 +10,5 @@ RSAAuthentication yes
 PubkeyAuthentication yes
 PasswordAuthentication no
 PrintMotd yes
-" > /etc/ssh/sshd_config.d/my.config'
+" > /etc/ssh/sshd_config.d/my.conf'
 echo "&sudopw" | sudo -S sh -c 'service sshd restart'
