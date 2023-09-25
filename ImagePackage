@@ -1,0 +1,1 @@
+docker-compose images| awk 'FNR > 2 {print $2":"$3}'| sort -u|xargs docker save -o images.tar
